@@ -1,23 +1,64 @@
 <resources>
-  <string name="app_name">HomeFit</string>
-  <string name="action_settings">Settings</string>
-  <string name="login_successful">You successful.</string>
-  <string name="login_unsuccessful">You failed.</string>
-  <string name="user_name">jdoe</string>
-  <string name="password">welcome1</string>
-  <string name="slogan">Delivering health directly to your home.</string>
-  <string name="title_activity_login">Sign in</string>
 
-  <!-- Strings related to login -->
-  <string name="prompt_email">Email</string>
-  <string name="prompt_password">Password (optional)</string>
-  <string name="action_sign_in">Sign in or register</string>
-  <string name="action_sign_in_short">Sign in</string>
-  <string name="error_invalid_email">This email address is invalid</string>
-  <string name="error_invalid_password">This password is too short</string>
-  <string name="error_incorrect_password">This password is incorrect</string>
-  <string name="error_field_required">This field is required</string>
-  <string name="permission_rationale">"Contacts permissions are needed for providing email
-    completions."
-  </string>
+  <!-- App -->
+  <string name="app_name">HomeFit</string>
+
+  <!-- Users -->
+  <string name="user_str_user_name">JDOE</string>
+  <string name="user_str_password">welcome1</string>
+
+  <!-- Titles -->
+  <string name="tit_app">HomeFit</string>
+  <string name="sub_tit_app">Sign In</string>
+  <string name="tit_tb">HomeFit</string>
+  <string name="sub_tit_tb">Sessions</string>
+
+  <!-- Prompts -->
+  <string name="prom_hint_login">Enter login</string>
+  <string name="prom_hint_password">Enter Password</string>
+
+  <!-- Messages -->
+  <string name="msg_login_successful">Sign in successful.</string>
+  <string name="msg_login_unsuccessful">Sign in failed.</string>
+
+  <!-- Labels -->
+  <string name="lbl_btn_sign_in">Sign in</string>
+  <string name="lbl_btn_sessions">Sessions</string>
+  <string name="lbl_btn_customers">Customers</string>
+  <string name="lbl_btn_billing">Billing</string>
+  <string name="lbl_btn_log_out">Log Out</string>
+
+  <!-- Descriptions -->
+  <string name="desc_logo">HomeFit Logo</string>
+  <string name="desc_login_activity">Login Screen</string>
+
+  <!-- Temp Content -->
+  <string name="list_item_temp">I am a temp list item</string>
+  <string-array name="btn_labels_nav">
+    <item>I am test label 1</item>
+    <item>I am test label 2</item>
+    <item>I am test label 3</item>
+    <item>I am test label 4</item>
+    <item>I am test label 5</item>
+    <item>I am test label 6</item>
+  </string-array>
+
+  <string-array name="dummy_test_data_item1">
+    <item>I am test item 1</item>
+    <item>I am test item 2</item>
+    <item>I am test item 3</item>
+    <item>I am test item 4</item>
+    <item>I am test item 5</item>
+    <item>I am test item 6</item>
+  </string-array>
+
+  <string-array name="dummy_test_data_item2">
+    <item>I am test item 1</item>
+    <item>I am test item 2</item>
+    <item>I am test item 3</item>
+    <item>I am test item 4</item>
+    <item>I am test item 5</item>
+    <item>I am test item 6</item>
+  </string-array>
+
 </resources>

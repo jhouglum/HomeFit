@@ -2,19 +2,73 @@
 
   <!-- Base application theme. -->
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!-- Customize your theme here. -->
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:icon">@mipmap/hf_launcher</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">false</item>
   </style>
 
   <style name="AppTheme.NoActionBar">
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
+
   </style>
 
-  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+  <style name="_Align_Mid_Child_vert">
+    <item name="android:layout_alignParentLeft">true</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">@dimen/_HomeFit_padding_sml_gen</item>
+    <item name="android:layout_weight">1</item>
+  </style>
 
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="_Align_Eld_Child_vert">
+    <item name="android:layout_alignParentTop">true</item>
+    <item name="android:layout_alignParentLeft">true</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginBottom">@dimen/_HomeFit_padding_sml_gen</item>
+    <item name="android:layout_weight">1</item>
+  </style>
+
+  <style name="_Align_Yng_Child_vert">
+    <item name="android:layout_alignParentLeft">true</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentBottom">true</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingLeft">@dimen/_HomeFit_padding_sml_gen</item>
+    <item name="android:paddingRight">@dimen/_HomeFit_padding_sml_gen</item>
+  </style>
+
+  <style name="_HomeFit_login_controls">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textColorHint">@android:color/black</item>
+    <item name="android:background">@android:color/white</item>
+    <item name="android:layout_margin">@dimen/_HomeFit_margin_med_button</item>
+    <item name="android:gravity">center</item>
+    <item name="android:padding">@dimen/_HomeFit_padding_lrg_button</item>
+  </style>
+
+  <style name="_HomeFit_navigation_buttons">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:background">@color/colorPrimary</item>
+    <item name="android:layout_margin">@dimen/_HomeFit_navigation_button_margin</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_weight">1</item>
+  </style>
 
 </resources>

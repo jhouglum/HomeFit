@@ -1,12 +1,13 @@
 package com.homefit.android.homefit;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -24,7 +25,11 @@ public class MainNavFragment extends Fragment {
 	Communicator navCommunicator;
 
 	public interface OnClickListener {
-		public void onClickView();
+		void onClickView();
+	}
+
+	public MainNavFragment() {
+		super();
 	}
 
 	@Override
@@ -35,29 +40,31 @@ public class MainNavFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 													 Bundle savedInstanceState) {
+
 		navCommunicator = (Communicator) getActivity();
 		navRelLayout = (RelativeLayout) getActivity().findViewById(R.id.fragment_main_nav);
+		inflater.inflate(R.layout.fragment_main_content, container, true);
+		/*
 		mNavToolBar = (Toolbar) getActivity().findViewById(R.id.main_nav_toolbar);
-		mNavToolBar.inflateMenu(R.menu.menu_tb);
+		mNavToolBar.inflateMenu(R.menu.menu_tb_main_nav);
 		mNavButtonSessions = (Button) getActivity().findViewById(R.id.nav_button_session);
 		mNavButtonCustomers = (Button) getActivity().findViewById(R.id.nav_button_customers);
-		navmNavButtonBilling = (Button) getActivity().findViewById(R.id.nav_button_billing);
+		navmNavButtonBilling = (Button) getActivity().findViewById(R.id.nav_button_billing);*/
 
 
-		RelativeLayout view = (RelativeLayout) getActivity().findViewById(R.id.fragment_main_nav);
-
-		mNavButtonSessions.OnClickListener(new View.OnClickListener() {
+/*		mNavButtonSessions.OnClickListener(new View.OnClickListener() {
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if (event.getAction() == KeyEvent.ACTION_DOWN)
 					if ((keyCode == KeyEvent.KEYCODE_DPAD_CENTER) ||
 						(keyCode == KeyEvent.KEYCODE_ENTER)) {
-						mNavButtonSessions.callOnClick(event);
+						Intent intent = new Intent();
+						intent.get
 						return true;
 					}
 				return false;
 			}
-		});
-		return view;
+		}); */
+		return navRelLayout;
 	}
 
 	@Override
@@ -75,10 +82,6 @@ public class MainNavFragment extends Fragment {
 	@Override
 	public void onStart() {
 		super.onStart();
-	}
-
-	@Override
-	public void onClick(View v) {
 	}
 
 	@Override
