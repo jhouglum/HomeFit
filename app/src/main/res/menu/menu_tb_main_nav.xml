@@ -4,5 +4,5 @@
   <item
     android:id="@+id/log_off_menu_item"
     android:title="@string/lbl_btn_log_out"
-    app:showAsAction="always"/>
+    app:showAsAction="never"/>
 </menu>

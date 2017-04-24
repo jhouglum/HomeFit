@@ -1,95 +1,93 @@
 package com.homefit.android.homefit;
 
-import android.location.Address;
-
 import java.util.UUID;
 
 public class Customer {
 
-	private UUID mCustomerId;
-	private String mCustomerFullName;
-	private String mCustomerAddressLine1;
-	private String mCustomerAddressLine2;
-	private String mCustomerCity;
-	private String mCustomerState;
-	private String mCustomerPostalCode;
-	private String mCustomerPhone;
+	private UUID mId;
+	private String mName;
+	private String mAddrOne;
+	private String mAddrTwo;
+	private String mCity;
+	private String mState;
+	private String mZip;
+	private String mPhone;
 
-	public Customer(String customerAddressLine1, String customerFullName,
-			String customerAddressLine2, String customerCity, String customerState,
-			String customerPostalCode, String customerPhone) {
+	public Customer(String addrOne, String name,
+									String addrTwo, String city, String state,
+									String zip, String phone) {
 
-		mCustomerId = UUID.randomUUID();
-		mCustomerFullName = customerFullName;
-		mCustomerAddressLine1 = customerAddressLine1;
-		mCustomerAddressLine2 = customerAddressLine2;
-		mCustomerCity = customerCity;
-		mCustomerState = customerState;
-		mCustomerPostalCode = customerPostalCode;
-		mCustomerPhone = customerPhone;
+		mId = UUID.randomUUID();
+		mName = name;
+		mAddrOne = addrOne;
+		mAddrTwo = addrTwo;
+		mCity = city;
+		mState = state;
+		mZip = zip;
+		mPhone = phone;
 	}
 
 	public Customer() {
-		mCustomerId = UUID.randomUUID();
+		mId = UUID.randomUUID();
 	}
 
-	public UUID getCustomerId() {
-		return mCustomerId;
+	public UUID getId() {
+		return mId;
 	}
 
-	public String getCustomerFullName() {
-		return mCustomerFullName;
+	public String getName() {
+		return mName;
 	}
 
-	public void setCustomerFullName(String customerFullName) {
-		mCustomerFullName = customerFullName;
+	public void setName(String name) {
+		mName = name;
 	}
 
-	public String getCustomerAddressLine1() {
-		return mCustomerAddressLine1;
+	public String getAddrOne() {
+		return mAddrOne;
 	}
 
-	public void setCustomerAddressLine1(String customerAddressLine1) {
-		mCustomerAddressLine1 = customerAddressLine1;
+	public void setAddrOne(String addrOne) {
+		mAddrOne = addrOne;
 	}
 
-	public String getCustomerAddressLine2() {
-		return mCustomerAddressLine2;
+	public String getAddrTwo() {
+		return mAddrTwo;
 	}
 
-	public void setCustomerAddressLine2(String customerAddressLine2) {
-		mCustomerAddressLine2 = customerAddressLine2;
+	public void setAddrTwo(String addrTwo) {
+		mAddrTwo = addrTwo;
 	}
 
-	public String getCustomerCity() {
-		return mCustomerCity;
+	public String getCity() {
+		return mCity;
 	}
 
-	public void setCustomerCity(String customerCity) {
-		mCustomerCity = customerCity;
+	public void setCity(String city) {
+		mCity = city;
 	}
 
-	public String getCustomerState() {
-		return mCustomerState;
+	public String getState() {
+		return mState;
 	}
 
-	public void setCustomerState(String customerState) {
-		mCustomerState = customerState;
+	public void setState(String state) {
+		mState = state;
 	}
 
-	public String getCustomerPostalCode() {
-		return mCustomerPostalCode;
+	public String getZip() {
+		return mZip;
 	}
 
-	public void setCustomerPostalCode(String customerPostalCode) {
-		mCustomerPostalCode = customerPostalCode;
+	public void setZip(String zip) {
+		mZip = zip;
 	}
 
-	public String getCustomerPhone() {
-		return mCustomerPhone;
+	public String getPhone() {
+		return mPhone;
 	}
 
-	public void setCustomerPhone(String customerPhone) {
-		mCustomerPhone = customerPhone;
+	public void setPhone(String phone) {
+		mPhone = phone;
 	}
 }

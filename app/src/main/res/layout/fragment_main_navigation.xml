@@ -1,34 +1,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@color/colorPrimaryDark"
   android:id="@+id/fragment_main_nav">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/main_nav_toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="?android:attr/actionBarSize"
-    android:background="@color/colorPrimaryDark"
+  <Toolbar
+    android:id="@+id/tool_bar_main_nav"
+    android:title="@string/app_name"
     android:subtitle="@string/tit_tb"
-    android:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-    app:subtitle="@string/sub_tit_app"
-    app:subtitleTextColor="@android:color/white"
-    app:title="@string/tit_app"
-    app:titleTextColor="@android:color/white">
-
-    <android.support.v7.view.menu.ListMenuItemView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/menu_toolbar_main" />
-
-    </android.support.v7.widget.Toolbar>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  </Toolbar>
 
   <LinearLayout
     android:id="@+id/main_nav_button_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@id/main_nav_toolbar"
     android:background="@color/colorAccent"
     android:gravity="center"
     android:orientation="horizontal"

@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:contentDescription="@string/desc_login_activity"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="50dp">
+
+  <ImageView
+    android:id="@+id/image_sign_in"
+    style="@style/_Align_Mid_Child_hor"
+    android:background="@android:color/background_light"
+    android:contentDescription="@string/desc_logo"
+    android:src="@drawable/login_image"/>
+
+  <LinearLayout
+    android:id="@+id/layout_sign_in"
+    style="@style/_Align_Mid_Child_hor"
+    android:layout_toRightOf="@+id/image_sign_in"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+      android:id="@+id/edtxt_sign_in_activity_sign_in"
+      style="@style/_HomeFit_login_controls_land"
+      android:hint="@string/prom_hint_login"/>
+
+    <EditText
+      android:id="@+id/login_act_pass_ft"
+      style="@style/_HomeFit_login_controls_land"
+      android:hint="@string/prom_hint_password"/>
+
+    <Button
+      android:id="@+id/btn_sign_in"
+      style="@style/_HomeFit_login_controls_land"
+      android:background="@android:color/background_dark"
+      android:onClick="onClick"
+      android:text="@string/lbl_btn_sign_in"
+      android:textColor="@android:color/background_light"/>
+  </LinearLayout>
+
+</RelativeLayout>

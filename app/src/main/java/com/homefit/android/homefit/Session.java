@@ -2,7 +2,6 @@ package com.homefit.android.homefit;
 
 import java.util.Date;
 import java.util.UUID;
-import com.homefit.android.homefit.Bill;
 
 public class Session {
 
