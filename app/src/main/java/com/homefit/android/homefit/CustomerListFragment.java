@@ -1,13 +1,9 @@
 package com.homefit.android.homefit;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -62,10 +59,12 @@ public class CustomerListFragment extends Fragment {
 			case R.id.menu_item_new_customer:
 				Customer customer = new Customer();
 				CustomerList.getCustomer(getActivity()).addCustomer(customer);
-				Intent intentNew = CustomerActivity.newIntent(getActivity(), customer.getId());
+				Intent intentNew = CustomerActivity.newIntent(getActivity(),
+							customer.getId());
 				startActivity(intentNew);
 				return true;
 			case R.id.menu_item_logoff:
+				Toast.makeText(getActivity(), R.string.msg_logging_off, Toast.LENGTH_SHORT).show();
 				if (LoginActivity.class == null) {
 					Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
 					startActivity(intentLogin);

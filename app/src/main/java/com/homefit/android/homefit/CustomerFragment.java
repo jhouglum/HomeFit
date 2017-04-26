@@ -43,6 +43,14 @@ public class CustomerFragment extends Fragment {
 	}
 
 	@Override
+	public void onPause() {
+		super.onPause();
+
+		CustomerList.getCustomer(getActivity())
+			.updateCustomer(mCustomer);
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 													 Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_customer, container, false);

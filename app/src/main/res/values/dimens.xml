@@ -1,43 +1,16 @@
 <resources>
-  <dimen name="fab_margin">16dp</dimen>
   <!-- Default screen margins, per the Android Design guidelines. -->
-  <dimen name="activity_horizontal_margin">16dp</dimen>
-  <dimen name="activity_vertical_margin">16dp</dimen>
 
   <!-- Padding -->
   <dimen name="_HomeFit_padding_lrg_button">6dp</dimen>
-  <dimen name="_HomeFit_padding_med_button">4dp</dimen>
-  <dimen name="_HomeFit_padding_sml_button">2dp</dimen>
 
-  <dimen name="_HomeFit_padding_lrg_text_field">6dp</dimen>
-  <dimen name="_HomeFit_padding_med_text_field">4dp</dimen>
-  <dimen name="_HomeFit_padding_sml_text_field">2dp</dimen>
-
-  <dimen name="_HomeFit_padding_lrg_gen">100dp</dimen>
   <dimen name="_HomeFit_padding_med_gen">50dp</dimen>
   <dimen name="_HomeFit_padding_sml_gen">25dp</dimen>
 
   <!-- Margins -->
-  <dimen name="_HomeFit_margin_lrg_button">6dp</dimen>
   <dimen name="_HomeFit_margin_med_button">4dp</dimen>
-  <dimen name="_HomeFit_margin_sml_button">2dp</dimen>
 
-  <dimen name="_HomeFit_margin_lrg_text_field">6dp</dimen>
-  <dimen name="_HomeFit_margin_med_text_field">4dp</dimen>
-  <dimen name="_HomeFit_margin_sml_text_field">2dp</dimen>
-
-  <dimen name="_HomeFit_margin_lrg_gen">100dp</dimen>
-  <dimen name="_HomeFit_margin_med_gen">50dp</dimen>
-  <dimen name="_HomeFit_margin_sml_gen">25dp</dimen>
-
-
-  <dimen name="login_activity_margin">35dp</dimen>
-  <dimen name="zero_margin">0dp</dimen>
 
   <!-- Navigation -->
-  <dimen name="_HomeFit_navigation_bar_margin">5dp</dimen>
-  <dimen name="_HomeFit_navigation_bar_padding">5dp</dimen>
   <dimen name="_HomeFit_navigation_button_margin">5dp</dimen>
-  <dimen name="_HomeFit_navigation_button_padding">5dp</dimen>
-  <dimen name="text_margin">16dp</dimen>
 </resources>

@@ -10,83 +10,60 @@
     <item name="windowNoTitle">false</item>
   </style>
 
-  <!-- Login activity theme. -->
-  <style name="Login" parent="Theme.AppCompat.NoActionBar">
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <item name="android:icon">@mipmap/hf_launcher</item>
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
+
+
+
+  <!-- Login -->
+  <style name="_homefit_login">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:gravity">center</item>
+  </style>
+  <style name="_homefit_login.containers">
+    <item name="android:padding">38dp</item>
+    <item name="android:orientation">vertical</item>
+    <item name="android:weightSum">3</item>
+  </style>
+  <style name="_homefit_login.containers.land">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">fill_parent</item>
+  </style>
+  <style name="_homefit_login.controls">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">fill_parent</item>
+    <item name="android:padding">1dp</item>
+    <item name="android:layout_margin">5dp</item>
+  </style>
+  <style name="_homefit_login.controls.text_fields">
+    <item name="android:background">@android:color/white</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textColorHint">@android:color/darker_gray</item>
+  </style>
+  <style name="_homefit_login.controls.buttons">
+    <item name="android:background">@android:color/black</item>
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textStyle">bold</item>
   </style>
 
-  <style name="_Align_Mid_Child_vert">
-    <item name="android:layout_alignParentLeft">true</item>
-    <item name="android:layout_alignParentRight">true</item>
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:padding">@dimen/_HomeFit_padding_sml_gen</item>
-    <item name="android:layout_weight">1</item>
-  </style>
 
-  <style name="_Align_Mid_Child_hor">
-    <item name="android:layout_alignParentTop">true</item>
-    <item name="android:layout_alignParentBottom">true</item>
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:paddingLeft">40dp</item>
-    <item name="android:paddingRight">40dp</item>
-    <item name="android:layout_weight">1</item>
-  </style>
 
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-  <style name="_Align_Eld_Child_vert">
-    <item name="android:layout_alignParentTop">true</item>
-    <item name="android:layout_alignParentLeft">true</item>
-    <item name="android:layout_alignParentRight">true</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_marginBottom">@dimen/_HomeFit_padding_sml_gen</item>
-    <item name="android:layout_weight">1</item>
-  </style>
-
-  <style name="_Align_Yng_Child_vert">
-    <item name="android:layout_alignParentLeft">true</item>
-    <item name="android:layout_alignParentRight">true</item>
-    <item name="android:layout_alignParentBottom">true</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:paddingLeft">25dp</item>
-    <item name="android:paddingRight">25dp</item>
-  </style>
 
   <style name="_HomeFit_login_controls">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">match_parent</item>
     <item name="android:textSize">14sp</item>
-    <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title</item>
-    <item name="android:textColor">@android:color/black</item>
-    <item name="android:textColorHint">@android:color/black</item>
     <item name="android:background">@android:color/white</item>
+    <item name="android:textColorHint">@android:color/darker_gray</item>
     <item name="android:layout_margin">@dimen/_HomeFit_margin_med_button</item>
     <item name="android:gravity">center</item>
     <item name="android:padding">@dimen/_HomeFit_padding_lrg_button</item>
   </style>
 
-  <style name="_HomeFit_login_controls_land">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title</item>
-    <item name="android:textColor">@android:color/black</item>
-    <item name="android:textColorHint">@android:color/black</item>
-    <item name="android:background">@android:color/white</item>
-    <item name="android:layout_margin">5dp</item>
-    <item name="android:gravity">center</item>
-    <item name="android:padding">5dp</item>
-  </style>
+
 
   <style name="_HomeFit_navigation_buttons">
     <item name="android:layout_width">match_parent</item>
@@ -96,6 +73,17 @@
     <item name="android:background">@color/colorPrimary</item>
     <item name="android:layout_margin">@dimen/_HomeFit_navigation_button_margin</item>
     <item name="android:gravity">center</item>
+    <item name="android:layout_weight">1</item>
+  </style>
+
+
+
+  <style name="_homefit_center_child_vert">
+    <item name="android:layout_alignParentLeft">true</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">@dimen/_HomeFit_padding_sml_gen</item>
     <item name="android:layout_weight">1</item>
   </style>
 

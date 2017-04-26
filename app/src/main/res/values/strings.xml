@@ -3,31 +3,18 @@
   <!-- Customer -->
   <string name="customer_name">Customer Name</string>
   <string name="customer_name_hint">Enter customer name</string>
-  <string name="customer_name_label">Name</string>
   <string name="customer_address_one_hint">Enter customer address_one</string>
-  <string name="customer_address_one_label">Address_one</string>
   <string name="customer_address_two_hint">Enter customer address_two</string>
-  <string name="customer_address_two_label">Address_two</string>
   <string name="customer_city_hint">Enter customer city</string>
-  <string name="customer_city_label">City</string>
   <string name="customer_state_hint">Enter customer state</string>
-  <string name="customer_state_label">State</string>
   <string name="customer_zip_hint">Enter customer zip</string>
-  <string name="customer_zip_label">Zip</string>
   <string name="customer_phone_hint">Enter customer phone</string>
-  <string name="customer_phone_label">phone</string>
-  <string name="customer_tb_show_subtitle">Show Subtitle</string>
-  <string name="customer_tb_hide_subtitle">Hide Subtitle</string>
-  <string name="customer_tb_subtitle_format">%1$s customers</string>
 
   <!-- Login -->
   <string name="login_title">Login</string>
   <string name="login_login_field_hint">Enter Login</string>
-  <string name="login_login_field_cont_desc">Login Field</string>
   <string name="login_password_field_hint">Enter Password</string>
-  <string name="login_password_field_cont_desc">Password Field</string>
-  <string name="login_login_button_text">Login</string>
-  <string name="login_login_button_cont_desc">Login Button</string>
+  <string name="login_login_button_text">Sign In</string>
 
   <!-- App -->
   <string name="app_name">HomeFit</string>
@@ -39,60 +26,24 @@
   <string name="user_str_password">welcome1</string>
 
   <!-- Titles -->
-  <string name="tit_app">HomeFit</string>
-  <string name="sub_tit_app">Sign In</string>
-  <string name="tit_tb">HomeFit</string>
-  <string name="sub_tit_tb">Sessions</string>
 
   <!-- Prompts -->
   <string name="prom_hint_login">Enter login</string>
   <string name="prom_hint_password">Enter Password</string>
 
   <!-- Messages -->
-  <string name="msg_login_successful">Sign in successful.</string>
-  <string name="msg_login_unsuccessful">Sign in failed.</string>
+  <string name="msg_login_unsuccessful">Sign in failed</string>
+  <string name="msg_logging_off">Logging off</string>
 
   <!-- Labels -->
   <string name="lbl_btn_sign_in">Sign in</string>
-  <string name="lbl_btn_sessions">Sessions</string>
-  <string name="lbl_btn_customers">Customers</string>
-  <string name="lbl_btn_billing">Billing</string>
-  <string name="lbl_btn_log_out">Log Out</string>
 
   <!-- Descriptions -->
   <string name="desc_logo">HomeFit Logo</string>
   <string name="desc_login_activity">Login Screen</string>
 
   <!-- Temp Content -->
-  <string name="list_item_temp">I am a temp list item</string>
-  <string-array name="btn_labels_nav">
-    <item>I am test label 1</item>
-    <item>I am test label 2</item>
-    <item>I am test label 3</item>
-    <item>I am test label 4</item>
-    <item>I am test label 5</item>
-    <item>I am test label 6</item>
-  </string-array>
-
-  <string-array name="dummy_test_data_item1">
-    <item>I am test item 1</item>
-    <item>I am test item 2</item>
-    <item>I am test item 3</item>
-    <item>I am test item 4</item>
-    <item>I am test item 5</item>
-    <item>I am test item 6</item>
-  </string-array>
-
-  <string-array name="dummy_test_data_item2">
-    <item>I am test item 1</item>
-    <item>I am test item 2</item>
-    <item>I am test item 3</item>
-    <item>I am test item 4</item>
-    <item>I am test item 5</item>
-    <item>I am test item 6</item>
-  </string-array>
 
   <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

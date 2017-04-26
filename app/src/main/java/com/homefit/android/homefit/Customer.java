@@ -13,22 +13,12 @@ public class Customer {
 	private String mZip;
 	private String mPhone;
 
-	public Customer(String addrOne, String name,
-									String addrTwo, String city, String state,
-									String zip, String phone) {
-
-		mId = UUID.randomUUID();
-		mName = name;
-		mAddrOne = addrOne;
-		mAddrTwo = addrTwo;
-		mCity = city;
-		mState = state;
-		mZip = zip;
-		mPhone = phone;
+	public Customer() {
+		this(UUID.randomUUID());
 	}
 
-	public Customer() {
-		mId = UUID.randomUUID();
+	public Customer(UUID id) {
+		mId = id;
 	}
 
 	public UUID getId() {
