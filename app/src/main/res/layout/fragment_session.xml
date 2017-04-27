@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/session_cust_name"
+    android:id="@+id/session_frag_cust_name_tv"/>
+
+  <Button
+    android:id="@+id/session_frag_sess_date"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+  <EditText
+    android:id="@+id/session_frag_sess_plan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:hint="@string/customer_address_one_hint"/>
+
+  <EditText
+    android:id="@+id/session_frag_sess_cost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:hint="@string/customer_address_two_hint"/>
+
+  <CheckBox
+    android:id="@+id/session_frag_sess_complete_chkbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+  <CheckBox
+    android:id="@+id/session_frag_sess_paid_chkbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+ </LinearLayout>

@@ -10,6 +10,14 @@
   <string name="customer_zip_hint">Enter customer zip</string>
   <string name="customer_phone_hint">Enter customer phone</string>
 
+  <!-- Session -->
+  <string name="session_cust_name">Session Customer Name</string>
+  <string name="session_plan">Workout until customer hurls. Party on!</string>
+  <string name="session_plan_hint">Enter session plan</string>
+  <string name="session_cost">19.99</string>
+  <string name="session_date_picker_title">Session Date</string>
+
+
   <!-- Login -->
   <string name="login_title">Login</string>
   <string name="login_login_field_hint">Enter Login</string>
@@ -18,7 +26,8 @@
 
   <!-- App -->
   <string name="app_name">HomeFit</string>
-  <string name="menu_item_add_new">Add New</string>
+  <string name="menu_item_add_customer">Add Customer</string>
+  <string name="menu_item_add_session">Add Session</string>
   <string name="logoff">LogOff</string>
 
   <!-- Users -->
@@ -37,13 +46,24 @@
 
   <!-- Labels -->
   <string name="lbl_btn_sign_in">Sign in</string>
+  <string name="lbl_screen_bill">Bill</string>
+  <string name="lbl_screen_billing">Billing</string>
+  <string name="lbl_screen_customer">Customer</string>
+  <string name="lbl_screen_customers">Customers</string>
+  <string name="lbl_screen_session">Session</string>
+  <string name="lbl_screen_sessions">Sessions</string>
 
   <!-- Descriptions -->
   <string name="desc_logo">HomeFit Logo</string>
   <string name="desc_login_activity">Login Screen</string>
 
-  <!-- Temp Content -->
+
+  <string name="temp_session_list_item_text">Session list item text</string>
+  <string name="temp_session_title">Session</string>
+  <string name="temp_bill_list_item_text">Bill list item text</string>
+  <string name="temp_bill_title">Billing</string>
 
   <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

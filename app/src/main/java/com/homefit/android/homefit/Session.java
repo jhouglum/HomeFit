@@ -5,63 +5,75 @@ import java.util.UUID;
 
 public class Session {
 
-	private UUID mSessionId;
-	private UUID mCustomerId;
-	private Date mSessionDate;
-	private String mSessionPlan;
-	private float mSessionCost;
-	private boolean mSessionIsComplete;
-	private boolean mSessionIsPaid;
-	private Bill mSessionBill;
+	private UUID mSessId;
+	private String mCustId; //change to UUID
+	private String mDate; //change to date
+	private String mPlan;
+	private float mCost;
+	private boolean mComplete;
+	private boolean mIsPaid;
 
-	public Session(UUID customerId, Date sessionDate, String sessionPlan,
-			float sessionCost, boolean sessionIsPaid) {
-		mSessionId = UUID.randomUUID();
-		mCustomerId = customerId;
-		mSessionPlan = sessionPlan;
-		mSessionDate = sessionDate;
-		mSessionCost = sessionCost;
-		mSessionIsPaid = sessionIsPaid;
-		mSessionBill = new Bill(mSessionId, mSessionCost, mSessionIsPaid);
+	public Session() {
+		this(UUID.randomUUID());
 	}
 
-	public UUID getSessionId() {
-		return mSessionId;
+	public Session(UUID id) {
+		mSessId = id;
 	}
 
-	public UUID getCustomerId() {
-		return mCustomerId;
+	public UUID getSessId() {
+		return mSessId;
 	}
 
-	public Date getSessionDate() {
-		return mSessionDate;
+	public void setSessId(UUID sessId) {
+		mSessId = sessId;
 	}
 
-	public void setSessionDate(Date sessionDate) {
-		mSessionDate = sessionDate;
+	public String getCustId() {
+		return mCustId;
 	}
 
-	public float getSessionCost() {
-		return mSessionCost;
+	public void setCustId(String custId) {
+		mCustId = custId;
 	}
 
-	public void setSessionCost(float sessionCost) {
-		mSessionCost = sessionCost;
+	public String getDate() { //change to date
+		return mDate;
 	}
 
-	public boolean isSessionComplete() {
-		return mSessionIsComplete;
+	public void setDate(String date) { //change to date
+		mDate = date;
 	}
 
-	public void setSessionComplete(boolean sessionComplete) {
-		mSessionIsComplete = sessionComplete;
+	public String getPlan() {
+		return mPlan;
 	}
 
-	public boolean isSessionPaid() {
-		return mSessionIsPaid;
+	public void setPlan(String plan) {
+		mPlan = plan;
 	}
 
-	public void setSessionPaid(boolean sessionPaid) {
-		mSessionIsPaid = sessionPaid;
+	public float getCost() {
+		return mCost;
+	}
+
+	public void setCost(float cost) {
+		mCost = cost;
+	}
+
+	public boolean isComplete() {
+		return mComplete;
+	}
+
+	public void setComplete(boolean complete) {
+		mComplete = complete;
+	}
+
+	public boolean isPaid() {
+		return mIsPaid;
+	}
+
+	public void setPaid(boolean paid) {
+		mIsPaid = paid;
 	}
 }

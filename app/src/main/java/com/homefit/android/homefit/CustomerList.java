@@ -30,7 +30,7 @@ public class CustomerList {
 	private CustomerList(Context context) {
 		mContext = context.getApplicationContext();
 		mDatabase = new HomeFitBaseHelper(context)
-				.getWritableDatabase();
+			.getWritableDatabase();
 	}
 
 	private static ContentValues getContentValues(Customer customer) {
@@ -63,12 +63,12 @@ public class CustomerList {
 	private CursorWrapper queryCustomers(String whereClause, String[] whereArgs) {
 		Cursor cursor = mDatabase.query(
 			CustomerTable.TABLE_NAME,
-			null,
+			null, // Columns - null selects all columns
 			whereClause,
 			whereArgs,
-			null,
-			null,
-			null
+			null, // groupBy
+			null, // having
+			null  // orderBy
 		);
 		return new CustomerCursorWrapper(cursor);
 	}
@@ -92,10 +92,10 @@ public class CustomerList {
 	}
 
 	public Customer getCustomer(UUID id) {
-			CustomerCursorWrapper cursor = (CustomerCursorWrapper) queryCustomers(
-					CustomerTable.Cols.UUID + " = ?",
-					new String[] { id.toString() }
-			);
+		CustomerCursorWrapper cursor = (CustomerCursorWrapper) queryCustomers(
+			CustomerTable.Cols.UUID + " = ?",
+			new String[] { id.toString() }
+		);
 
 		try {
 			if (cursor.getCount() == 0) {

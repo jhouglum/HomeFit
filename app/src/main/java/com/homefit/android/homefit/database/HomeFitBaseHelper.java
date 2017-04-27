@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.homefit.android.homefit.database.HomeFitDbSchema.CustomerTable;
+import com.homefit.android.homefit.database.HomeFitDbSchema.SessionTable;
 
 public class HomeFitBaseHelper extends SQLiteOpenHelper {
 	private static final int VERSION = 1;
@@ -26,6 +27,16 @@ public class HomeFitBaseHelper extends SQLiteOpenHelper {
 			CustomerTable.Cols.STATE + ", " +
 			CustomerTable.Cols.ZIP + ", " +
 			CustomerTable.Cols.PHONE + ")"
+		);
+		db.execSQL("create table " + SessionTable.TABLE_NAME + "(" +
+			" _id integer primary key autoincrement, " +
+			SessionTable.Cols.UUID + ", " +
+			SessionTable.Cols.CUSTOMER_ID + ", " +
+			SessionTable.Cols.SESSION_PLAN + ", " +
+			SessionTable.Cols.DATE + ", " +
+			SessionTable.Cols.COST + ", " +
+			SessionTable.Cols.IS_PAID + ", " +
+			SessionTable.Cols.IS_COMPLETE + ")"
 		);
 	}
 

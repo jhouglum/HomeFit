@@ -50,7 +50,7 @@ public class CustomerListFragment extends Fragment {
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-		inflater.inflate(R.menu.fragment_menu, menu);
+		inflater.inflate(R.menu.customer_menu, menu);
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class CustomerListFragment extends Fragment {
 				Customer customer = new Customer();
 				CustomerList.getCustomer(getActivity()).addCustomer(customer);
 				Intent intentNew = CustomerActivity.newIntent(getActivity(),
-							customer.getId());
+					customer.getId());
 				startActivity(intentNew);
 				return true;
 			case R.id.menu_item_logoff:
@@ -126,7 +126,7 @@ public class CustomerListFragment extends Fragment {
 		public CustomerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 			LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
 			View view = layoutInflater.inflate(R.layout.list_item_customer,
-					parent, false);
+				parent, false);
 			return new CustomerHolder(view);
 		}
 
