@@ -37,7 +37,9 @@ public class LoginActivity extends AppCompatActivity {
 		if (login.equals(getString(R.string.user_str_user_name)) &&
 				pass.equals(getString(R.string.user_str_password))) {
 			Intent intent = new Intent(LoginActivity.this,
-					CustomerListActivity.class);
+					MainActivity.class);
+			Toast.makeText(this, R.string.msg_login_successful,
+				Toast.LENGTH_SHORT).show();
 			startActivity(intent);
 		} else {
 			clearPassword();

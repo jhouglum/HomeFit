@@ -5,10 +5,5 @@
     android:id="@+id/menu_item_new_session"
     android:icon="@drawable/ic_add_session"
     android:title="@string/menu_item_add_session"
-    app:showAsAction="ifRoom|withText"/>
-  <item
-    android:id="@+id/menu_item_logoff"
-    android:icon="@android:drawable/ic_lock_idle_lock"
-    android:title="@string/logoff"
-    app:showAsAction="never"/>
+    app:showAsAction="ifRoom"/>
 </menu>

@@ -35,12 +35,16 @@
   <string name="user_str_password">welcome1</string>
 
   <!-- Titles -->
+  <string name="tab_title_customer">Customers</string>
+  <string name="tab_title_sessions">Sessions</string>
+  <string name="tab_title_billing">Billing</string>
 
   <!-- Prompts -->
   <string name="prom_hint_login">Enter login</string>
   <string name="prom_hint_password">Enter Password</string>
 
   <!-- Messages -->
+  <string name="msg_login_successful">Access granted</string>
   <string name="msg_login_unsuccessful">Sign in failed</string>
   <string name="msg_logging_off">Logging off</string>
 
@@ -62,6 +66,7 @@
   <string name="temp_session_title">Session</string>
   <string name="temp_bill_list_item_text">Bill list item text</string>
   <string name="temp_bill_title">Billing</string>
+  <string name="temp_menu_item_billing">TEMP BILL MENU ITEM</string>
 
   <string-array name="temp_bill_list">
     <item name="temp_bill_item_one">I am temp bill item one</item>
@@ -72,5 +77,8 @@
 
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="title_activity_main">MainActivity</string>
+  <string name="action_settings">Settings</string>
+  <string name="section_format">Hello World from section: %1$d</string>
 
 </resources>

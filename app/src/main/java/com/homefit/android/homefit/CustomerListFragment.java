@@ -63,14 +63,6 @@ public class CustomerListFragment extends Fragment {
 					customer.getId());
 				startActivity(intentNew);
 				return true;
-			case R.id.menu_item_logoff:
-				Toast.makeText(getActivity(), R.string.msg_logging_off, Toast.LENGTH_SHORT).show();
-				if (LoginActivity.class == null) {
-					Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
-					startActivity(intentLogin);
-				}
-				getActivity().finish();
-				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}

@@ -70,20 +70,8 @@ public class BillListFragment extends Fragment implements View.OnClickListener, 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-//			case R.id.menu_item_new_session:
-//				Session session = new Session();
-//				SessionList.get(getActivity()).addSession(session);
-//				Intent intentNew = SessionActivity.newIntent(getActivity(),
-//					session.getSessId());
-//				startActivity(intentNew);
-//				return true;
-			case R.id.menu_item_logoff:
-				Toast.makeText(getActivity(), R.string.msg_logging_off, Toast.LENGTH_SHORT).show();
-				if (LoginActivity.class == null) {
-					Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
-					startActivity(intentLogin);
-				}
-				getActivity().finish();
+			case R.id.menu_item_billing:
+				Toast.makeText(getActivity(),"I'll do something in billing", Toast.LENGTH_SHORT).show();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
