@@ -63,6 +63,13 @@
   <string name="temp_bill_list_item_text">Bill list item text</string>
   <string name="temp_bill_title">Billing</string>
 
+  <string-array name="temp_bill_list">
+    <item name="temp_bill_item_one">I am temp bill item one</item>
+    <item name="temp_bill_item_two">I am temp bill item two</item>
+    <item name="temp_bill_item_three">I am temp bill item three</item>
+  </string-array>
+
+
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
 
