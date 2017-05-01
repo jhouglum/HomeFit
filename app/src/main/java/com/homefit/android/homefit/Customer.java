@@ -12,6 +12,7 @@ public class Customer {
 	private String mState;
 	private String mZip;
 	private String mPhone;
+	private String mEmail;
 
 	public Customer() {
 		this(UUID.randomUUID());
@@ -79,5 +80,13 @@ public class Customer {
 
 	public void setPhone(String phone) {
 		mPhone = phone;
+	}
+
+	public String getEmail() {
+		return mEmail;
+	}
+
+	public void setEmail(String email) {
+		mEmail = email;
 	}
 }

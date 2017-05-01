@@ -1,8 +1,10 @@
 package com.homefit.android.homefit;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
 		mEdTxtLogin = (EditText) findViewById(R.id.login_activity_login_tf);
 		mEdTxtPass = (EditText) findViewById(R.id.login_activity_pass_tf);
 		mBttnLogin = (Button) findViewById(R.id.login_activity_login_bttn);
-
   }
 
   public void onClick(View view) {

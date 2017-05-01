@@ -2,13 +2,17 @@
 
   <!-- Customer -->
   <string name="customer_name">Customer Name</string>
-  <string name="customer_name_hint">Enter customer name</string>
-  <string name="customer_address_one_hint">Enter customer address_one</string>
-  <string name="customer_address_two_hint">Enter customer address_two</string>
-  <string name="customer_city_hint">Enter customer city</string>
-  <string name="customer_state_hint">Enter customer state</string>
-  <string name="customer_zip_hint">Enter customer zip</string>
-  <string name="customer_phone_hint">Enter customer phone</string>
+  <string name="customer_name_hint">Name</string>
+  <string name="customer_address_one_hint">Address1</string>
+  <string name="customer_address_two_hint">Address2</string>
+  <string name="customer_city_hint">City</string>
+  <string name="customer_state_hint">St </string>
+  <string name="customer_zip_hint">Zip</string>
+  <string name="customer_phone_hint">Phone</string>
+  <string name="customer_email_hint">Email</string>
+	<string name="customer_add_bttn_text">Save</string>
+	<string name="customer_add_bttn_toast">Changes Saved</string>
+	<string name="customer_image_content_desc">Customer Image</string>
 
   <!-- Session -->
   <string name="session_cust_name">Session Customer Name</string>
@@ -31,16 +35,19 @@
   <string name="logoff">LogOff</string>
 
   <!-- Users -->
-  <string name="user_str_user_name">JDOE</string>
+  <string name="user_str_user_name">jdoe</string>
   <string name="user_str_password">welcome1</string>
 
   <!-- Titles -->
   <string name="tab_title_customer">Customers</string>
   <string name="tab_title_sessions">Sessions</string>
   <string name="tab_title_billing">Billing</string>
+	<string name="act_title_customer">Add/Edit Customer</string>
+	<string name="act_title_sessions">Add/Edit Sessions</string>
+	<string name="act_title_billing">Add/Edit Billing</string>
 
   <!-- Prompts -->
-  <string name="prom_hint_login">Enter login</string>
+  <string name="prom_hint_login">Enter Login</string>
   <string name="prom_hint_password">Enter Password</string>
 
   <!-- Messages -->

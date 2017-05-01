@@ -16,6 +16,7 @@ public class HomeFitDbSchema {
 			public static final String STATE = "state";
 			public static final String ZIP = "zip";
 			public static final String PHONE = "phone";
+			public static final String EMAIL = "email";
 		}
 	}
 

@@ -50,7 +50,7 @@ public class SessionListFragment extends Fragment {
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-		inflater.inflate(R.menu.sessions_menu, menu);
+		inflater.inflate(R.menu.sessions_list_menu, menu);
 	}
 
 	@Override

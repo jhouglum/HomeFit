@@ -1,36 +1,33 @@
 package com.homefit.android.homefit;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.PersistableBundle;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-	private CustomerListFragment custTabFrag;
-	private SessionListFragment sessTabFrag;
-	private BillListFragment billTabFrag;
+	private static final String EXTRA_CUSTOMER_ID =
+				"com.homefit.android.homefit.customer_id";
+	private static final String EXTRA_SESSION_ID =
+				"com.homefit.android.homefit.session_id";
 
-	private SectionsPagerAdapter mSectionsPagerAdapter;
-
+	private TabLayout mTabLayout;
 	private ViewPager mViewPager;
 
 	@Override
@@ -38,30 +35,23 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		Toolbar toolbar = (Toolbar) findViewById(
+					R.id.main_act_tool_bar);
+		toolbar.inflateMenu(R.menu.menu_main);
 		setSupportActionBar(toolbar);
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the activity.
 
-		custTabFrag = new CustomerListFragment();
-		sessTabFrag = new SessionListFragment();
-		billTabFrag = new BillListFragment();
+		mViewPager = (ViewPager) findViewById(
+					R.id.main_act_view_container);
+		createViewPager(mViewPager);
 
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.container);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-
-		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-		tabLayout.setupWithViewPager(mViewPager);
-		tabLayout.setScrollPosition(1,0,true);
+		mTabLayout = (TabLayout) findViewById(
+					R.id.main_act_tabs);
+		mTabLayout.setupWithViewPager(mViewPager);
+		createTabs();
 	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_main, menu);
 		return true;
 	}
@@ -82,89 +72,113 @@ public class MainActivity extends AppCompatActivity {
 		}
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-//	public static class PlaceholderFragment extends Fragment {
-//		/**
-//		 * The fragment argument representing the section number for this
-//		 * fragment.
-//		 */
-//		private static final String ARG_SECTION_NUMBER = "section_number";
+	private void createTabs() {
+		TextView mCustTab = (TextView) LayoutInflater.from(this)
+				.inflate(R.layout.tab_icon_custom, null);
+		mCustTab.setText(R.string.tab_title_customer);
+		mCustTab.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+		mCustTab.setSelected(true);
+		mTabLayout.getTabAt(0).setCustomView(mCustTab);
 
-//		public PlaceholderFragment() {
-//		}
+		TextView mSessTab = (TextView) LayoutInflater.from(this)
+				.inflate(R.layout.tab_icon_custom, null);
+		mSessTab.setText(R.string.tab_title_sessions);
+		mSessTab.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+		mTabLayout.getTabAt(1).setCustomView(mSessTab);
 
-		/**
-		 * Returns a new instance of this fragment for the given section
-		 * number.
-		 */
-//		public static PlaceholderFragment newInstance(int sectionNumber) {
-//			PlaceholderFragment fragment = new PlaceholderFragment();
-//			Bundle args = new Bundle();
-//			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-//			fragment.setArguments(args);
-//			return fragment;
-//		}
-
-//		@Override
-//		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//														 Bundle savedInstanceState) {
-//			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-//			TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-//			textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-//			return rootView;
-//		}
-//	}
-
-
-	@Override
-	protected void onRestart() {
-		super.onRestart();
+		TextView mBillTab = (TextView) LayoutInflater.from(this)
+				.inflate(R.layout.tab_icon_custom, null);
+		mBillTab.setText(R.string.tab_title_billing);
+		mBillTab.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+		mTabLayout.getTabAt(2).setCustomView(mBillTab);
 	}
 
-	/**
-	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-	 * one of the sections/tabs/pages.
-	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+	private void createViewPager(ViewPager viewPager) {
+		ViewPagerAdapter adapter = new ViewPagerAdapter(
+					getSupportFragmentManager());
+		adapter.addFrag(new CustomerListFragment(),
+					getString(R.string.lbl_screen_customer));
+		adapter.addFrag(new SessionListFragment(),
+					getString(R.string.lbl_screen_sessions));
+		adapter.addFrag(new BillListFragment(),
+					getString(R.string.lbl_screen_billing));
+		viewPager.setAdapter(adapter);
+		viewPager.setOffscreenPageLimit(adapter.getCount());
+	}
 
-		public SectionsPagerAdapter(FragmentManager fm) {
-			super(fm);
+	class ViewPagerAdapter extends FragmentPagerAdapter {
+		private final List<Fragment> mFragList = new ArrayList<>();
+		private final List<String> mFragTitleList = new ArrayList<>();
+
+		public ViewPagerAdapter(FragmentManager manager) {
+			super(manager);
 		}
 
 		@Override
 		public Fragment getItem(int position) {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a PlaceholderFragment (defined as a static inner class below).
-			switch (position) {
-				case 0:
-					return custTabFrag;
-				case 1:
-					return sessTabFrag;
-				case 2:
-					return billTabFrag;
-			}
-			return null;
+			return mFragList.get(position);
 		}
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 3;
+			return mFragList.size();
+		}
+
+		public void addFrag(Fragment fragment, String title) {
+			mFragList.add(fragment);
+			mFragTitleList.add(title);
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
-			switch (position) {
-				case 0:
-					return getString(R.string.tab_title_customer);
-				case 1:
-					return getString(R.string.tab_title_sessions);
-				case 2:
-					return getString(R.string.tab_title_billing);
-			}
-			return null;
+			return mFragTitleList.get(position);
 		}
+	}
+
+	@Override
+	protected void onStart() {
+		Log.d("MainSctivity", "called onStart");
+		super.onStart();
+	}
+
+	@Override
+	protected void onPause() {
+		Log.d("MainSctivity", "called onPause");
+		super.onPause();
+	}
+
+	@Override
+	protected void onResume() {
+		Log.d("MainSctivity", "called onResume");
+		super.onResume();
+	}
+
+	@Override
+	protected void onStop() {
+		Log.d("MainSctivity", "called onStop");
+		super.onStop();
+	}
+
+	@Override
+	protected void onDestroy() {
+		Log.d("MainSctivity", "called onDestroy");
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		mViewPager.getChildCount();
+	}
+
+	@Override
+	protected void onPostResume() {
+		super.onPostResume();
 	}
 }

@@ -1,40 +1,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="40dp"
-    android:weightSum="3"
-    android:background="@android:color/background_dark">
+							style="@style/LoginTheme.Layout.Fill"
+							android:layout_rowWeight="2"
+							android:background="@color/colorPrimaryLight"
+							android:orientation="horizontal"
+							android:padding="40dp">
 
-  <ImageView
-    android:id="@+id/login_image_view"
-    style="@style/_homefit_login.containers.land"
-    android:background="@android:color/background_light"
-    android:contentDescription="@string/desc_logo"
-    android:src="@drawable/login_image"/>
+	<FrameLayout
+		android:id="@+id/login_image_frame"
+		style="@style/LoginTheme.Layout.Fill">
 
-  <LinearLayout
-    style="@style/_homefit_login.containers.land"
-    android:background="@color/colorPrimary"
-    android:layout_weight="2">
+		<ImageView
+			android:id="@+id/login_image_view"
+			style="@style/LoginTheme.Layout.Fill"
+			android:contentDescription="@string/desc_logo"
+			android:padding="40dp"
+			android:src="@mipmap/ic_launcher">
+		</ImageView>
+	</FrameLayout>
 
-    <EditText
-      android:id="@+id/login_activity_login_tf"
-      style="@style/_homefit_login.controls.text_fields"
-      android:hint="@string/prom_hint_login"/>
+	<FrameLayout
+		android:id="@+id/login_controls_frame"
+		style="@style/LoginTheme.Layout.Fill"
+		android:layout_width="match_parent"
+		android:background="@color/colorSecondary">
 
-    <EditText
-      android:id="@+id/login_activity_pass_tf"
-      style="@style/_homefit_login.controls.text_fields"
-      android:hint="@string/prom_hint_password"/>
+		<LinearLayout
+			android:id="@+id/login_controls_lin_layout"
+			style="@style/LoginTheme.Layout.Fill"
+			android:background="@color/colorPrimaryDark"
+			android:orientation="vertical"
+			android:padding="40dp"
+			android:weightSum="3">
 
-    <Button
-      android:id="@+id/login_activity_login_bttn"
-      style="@style/_homefit_login.controls.buttons"
-      android:onClick="onClick"
-      android:text="@string/lbl_btn_sign_in"/>
+			<EditText
+				android:id="@+id/login_activity_login_tf"
+				style="@style/LoginTheme.TextFields"
+				android:layout_height="wrap_content"
+				android:layout_gravity="fill_horizontal"
+				android:hint="@string/prom_hint_login"/>
 
-  </LinearLayout>
+			<EditText
+				android:id="@+id/login_activity_pass_tf"
+				style="@style/LoginTheme.TextFields"
+				android:layout_height="wrap_content"
+				android:layout_gravity="fill_horizontal"
+				android:hint="@string/prom_hint_password"/>
+
+			<Button
+				android:id="@+id/login_activity_login_bttn"
+				style="@style/LoginTheme.Buttons"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="3dp"
+				android:background="@color/colorPrimaryLight"
+				android:onClick="onClick"
+				android:text="@string/lbl_btn_sign_in"/>
+		</LinearLayout>
+	</FrameLayout>
 </LinearLayout>
+
 
 

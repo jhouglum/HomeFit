@@ -1,96 +1,147 @@
 <resources>
 
   <!-- Base application theme. -->
-  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
     <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@android:color/black</item>
-    <item name="colorAccent">@color/colorAccent</item>
-    <item name="android:icon">@mipmap/hf_launcher</item>
-    <item name="windowActionBar">true</item>
-    <item name="windowNoTitle">false</item>
-  </style>
-
-
-  <!-- Login -->
-  <style name="_homefit_login">
-    <item name="android:layout_width">fill_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_weight">1</item>
-    <item name="android:gravity">center</item>
-  </style>
-
-  <style name="_homefit_login.containers">
-    <item name="android:padding">38dp</item>
-    <item name="android:orientation">vertical</item>
-    <item name="android:weightSum">3</item>
-  </style>
-
-  <style name="_homefit_login.containers.land">
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">fill_parent</item>
-  </style>
-
-  <style name="_homefit_login.controls">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">fill_parent</item>
-    <item name="android:padding">1dp</item>
-    <item name="android:layout_margin">5dp</item>
-  </style>
-
-  <style name="_homefit_login.controls.text_fields">
-    <item name="android:background">@android:color/white</item>
-    <item name="android:textColor">@android:color/black</item>
-    <item name="android:textColorHint">@android:color/darker_gray</item>
-  </style>
-
-  <style name="_homefit_login.controls.buttons">
-    <item name="android:background">@android:color/black</item>
-    <item name="android:textColor">@android:color/white</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:textStyle">bold</item>
-  </style>
-
-
-  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-  <style name="_HomeFit_login_controls">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">match_parent</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:background">@android:color/white</item>
-    <item name="android:textColorHint">@android:color/darker_gray</item>
-    <item name="android:layout_margin">@dimen/_HomeFit_margin_med_button</item>
-    <item name="android:gravity">center</item>
-    <item name="android:padding">@dimen/_HomeFit_padding_lrg_button</item>
-  </style>
-
-
-  <style name="_HomeFit_navigation_buttons">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:textColor">@android:color/white</item>
-    <item name="android:background">@color/colorPrimary</item>
-    <item name="android:layout_margin">@dimen/_HomeFit_navigation_button_margin</item>
-    <item name="android:gravity">center</item>
-    <item name="android:layout_weight">1</item>
-  </style>
-
-
-  <style name="_homefit_center_child_vert">
-    <item name="android:layout_alignParentLeft">true</item>
-    <item name="android:layout_alignParentRight">true</item>
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:padding">@dimen/_HomeFit_padding_sml_gen</item>
-    <item name="android:layout_weight">1</item>
-  </style>
-
-  <style name="AppTheme.NoActionBar">
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorPrimaryLight</item>
+    <item name="android:icon">@mipmap/ic_launcher</item>
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:background">@color/colorPrimary</item>
+		<item name="android:layout_weight">1</item>
   </style>
+
+	<!-- Layouts -->
+	<style name="AppTheme.Layout">
+		<item name="android:layout_gravity">center</item>
+	</style>
+	<style name="AppTheme.Layout.Fill">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+	<style name="AppTheme.Layout.Horizontal">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">match_parent</item>
+	</style>
+	<style name="AppTheme.Layout.Vertical">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:layout_gravity">fill_horizontal</item>
+	</style>
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textColor">@android:color/white</item>
+		<item name="android:background">@color/colorPrimary</item>
+    <item name="android:textStyle">bold</item>
+	</style>
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:background">@color/colorPrimary</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="AppTheme.Buttons">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textAlignment">center</item>
+		<item name="android:layout_margin">2dp</item>
+		<item name="android:background">@color/colorPrimaryDark</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	<style name="AppTheme.TextFields">
+		<item name="android:textStyle">normal</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">2dp</item>
+		<item name="android:textAlignment">textStart</item>
+		<item name="android:background">@android:color/white</item>
+		<item name="android:textColor">@android:color/black</item>
+		<item name="android:textColorHint">@android:color/darker_gray</item>
+		<item name="android:paddingLeft">5dp</item>
+	</style>
+	<style name="AppTheme.TextViews">
+		<item name="android:layout_margin">1dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:textAlignment">textStart</item>
+		<item name="android:background">@android:color/white</item>
+		<item name="android:textColor">@android:color/black</item>
+	</style>
+
+
+
+
+
+
+	<!-- Login -->
+	<style name="LoginTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorPrimaryLight</item>
+		<item name="android:icon">@mipmap/ic_launcher</item>
+		<item name="windowActionBar">true</item>
+		<item name="windowNoTitle">false</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:background">@color/colorPrimary</item>
+		<item name="android:textAlignment">center</item>
+	</style>
+	<style name="LoginTheme.Layout">
+		<item name="android:layout_gravity">center</item>
+	</style>
+	<style name="LoginTheme.Layout.Fill">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+	<style name="LoginTheme.Layout.Horizontal">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">match_parent</item>
+	</style>
+	<style name="LoginTheme.Layout.Vertical">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:layout_gravity">center</item>
+	</style>
+	<style name="LoginTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="LoginTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="LoginTheme.TextFields">
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:textAlignment">center</item>
+		<item name="android:background">@android:color/white</item>
+		<item name="android:textColor">@android:color/black</item>
+		<item name="android:textColorHint">@android:color/darker_gray</item>
+		<item name="android:focusable">true</item>
+		<item name="android:focusableInTouchMode">true</item>
+	</style>
+	<style name="LoginTheme.TextViews">
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:textAlignment">textStart</item>
+		<item name="android:background">@android:color/white</item>
+		<item name="android:textColor">@android:color/black</item>
+	</style>
+	<style name="LoginTheme.Buttons">
+		<item name="android:textStyle">bold</item>
+		<item name="android:textAlignment">center</item>
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:background">@color/colorPrimaryDark</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:focusable">true</item>
+		<item name="android:focusableInTouchMode">true</item>
+	</style>
 
 </resources>

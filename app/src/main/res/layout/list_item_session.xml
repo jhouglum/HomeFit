@@ -10,6 +10,7 @@
     android:layout_height="wrap_content"
     android:textStyle="bold"
     android:padding="4dp"
-    tools:text="@string/session_cust_name"/>
+    tools:text="@string/session_cust_name"
+    style="@style/AppTheme.TextFields"/>
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -17,7 +18,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
+
 public class CustomerListFragment extends Fragment {
+	private static String EXTRA_IS_NEW_CUST = "new_customer";
+	private final int REQUEST_CODE = 1;
 
 	private RecyclerView mCustomerRecyclerView;
 	private CustomerAdapter mCustomerAdapter;
@@ -30,7 +35,7 @@ public class CustomerListFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-													 Bundle savedInstanceState) {
+	        Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_customer_list, container, false);
 
 		mCustomerRecyclerView = (RecyclerView) view.findViewById(R.id.customer_recycler_view);
@@ -48,9 +53,19 @@ public class CustomerListFragment extends Fragment {
 	}
 
 	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	public void onDetach() {
+		super.onDetach();
+	}
+
+	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-		inflater.inflate(R.menu.customer_menu, menu);
+		inflater.inflate(R.menu.customer_list_menu, menu);
 	}
 
 	@Override
@@ -59,12 +74,23 @@ public class CustomerListFragment extends Fragment {
 			case R.id.menu_item_new_customer:
 				Customer customer = new Customer();
 				CustomerList.getCustomer(getActivity()).addCustomer(customer);
-				Intent intentNew = CustomerActivity.newIntent(getActivity(),
-					customer.getId());
-				startActivity(intentNew);
+				Intent intentNew = CustomerActivity.newIntent(getActivity(), customer.getId());
+				startActivityForResult(intentNew, REQUEST_CODE);
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// REQUEST_CODE is defined above
+		if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
+			// Extract name value from result extras
+			String name = data.getExtras().getString("name");
+			int code = data.getExtras().getInt("code", 0);
+			// Toast the name to display temporarily on screen
+			Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
 		}
 	}
 
@@ -117,8 +143,7 @@ public class CustomerListFragment extends Fragment {
 		@Override
 		public CustomerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 			LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
-			View view = layoutInflater.inflate(R.layout.list_item_customer,
-				parent, false);
+			View view = layoutInflater.inflate(R.layout.list_item_customer, parent, false);
 			return new CustomerHolder(view);
 		}
 

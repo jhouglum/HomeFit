@@ -22,12 +22,15 @@ public class BillFragment extends Fragment {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setHasOptionsMenu(true);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 													 Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_bill, container, false);
+
+		getActivity().getActionBar().setDisplayShowHomeEnabled(true);
 
 		TextView textView = (TextView) v.findViewById(R.id.list_item_bill);
 		textView.setText(R.string.temp_bill_list_item_text);

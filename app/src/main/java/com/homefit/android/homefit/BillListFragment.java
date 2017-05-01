@@ -1,11 +1,8 @@
 package com.homefit.android.homefit;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -64,7 +61,7 @@ public class BillListFragment extends Fragment implements View.OnClickListener, 
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-		inflater.inflate(R.menu.billing_menu, menu);
+		inflater.inflate(R.menu.billing_list_menu, menu);
 	}
 
 	@Override

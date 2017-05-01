@@ -7,7 +7,7 @@ import android.database.CursorWrapper;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.homefit.android.homefit.database.CustomerCursorWrapper;
-import com.homefit.android.homefit.database.HomeFitBaseHelper;
+import com.homefit.android.homefit.database.HomeFitBaseOpenHelper;
 import com.homefit.android.homefit.database.HomeFitDbSchema.CustomerTable;
 
 import java.util.ArrayList;
@@ -29,20 +29,21 @@ public class CustomerList {
 
 	private CustomerList(Context context) {
 		mContext = context.getApplicationContext();
-		mDatabase = new HomeFitBaseHelper(context)
+		mDatabase = new HomeFitBaseOpenHelper(context)
 			.getWritableDatabase();
 	}
 
 	private static ContentValues getContentValues(Customer customer) {
 		ContentValues values = new ContentValues();
-		values.put(CustomerTable.Cols.UUID, customer.getId().toString());
-		values.put(CustomerTable.Cols.NAME, customer.getName());
-		values.put(CustomerTable.Cols.ADDRESS_ONE, customer.getAddrOne());
-		values.put(CustomerTable.Cols.ADDRESS_TWO, customer.getAddrTwo());
-		values.put(CustomerTable.Cols.CITY, customer.getCity());
-		values.put(CustomerTable.Cols.STATE, customer.getState());
-		values.put(CustomerTable.Cols.ZIP, customer.getZip());
-		values.put(CustomerTable.Cols.PHONE, customer.getPhone());
+			values.put(CustomerTable.Cols.UUID, customer.getId().toString());
+			values.put(CustomerTable.Cols.NAME, customer.getName());
+			values.put(CustomerTable.Cols.ADDRESS_ONE, customer.getAddrOne());
+			values.put(CustomerTable.Cols.ADDRESS_TWO, customer.getAddrTwo());
+			values.put(CustomerTable.Cols.CITY, customer.getCity());
+			values.put(CustomerTable.Cols.STATE, customer.getState());
+			values.put(CustomerTable.Cols.ZIP, customer.getZip());
+			values.put(CustomerTable.Cols.PHONE, customer.getPhone());
+			values.put(CustomerTable.Cols.EMAIL, customer.getEmail());
 		return values;
 	}
 

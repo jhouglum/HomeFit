@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.homefit.android.homefit.database.SessionCursorWrapper;
-import com.homefit.android.homefit.database.HomeFitBaseHelper;
+import com.homefit.android.homefit.database.HomeFitBaseOpenHelper;
 import com.homefit.android.homefit.database.HomeFitDbSchema.SessionTable;
 
 import java.util.ArrayList;
@@ -29,8 +29,8 @@ public class SessionList {
 
 	private SessionList(Context context) {
 		mContext = context.getApplicationContext();
-		mDatabase = new HomeFitBaseHelper(mContext)
-			.getWritableDatabase();
+		mDatabase = new HomeFitBaseOpenHelper(mContext)
+					.getWritableDatabase();
 	}
 
 	private static ContentValues getContentValues(Session session) {

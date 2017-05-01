@@ -43,6 +43,7 @@ public class SessionFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		UUID sessionId = (UUID) getArguments().getSerializable(ARG_SESSION_ID);
 		mSession = SessionList.get(getActivity()).getSessions(sessionId);
+		setHasOptionsMenu(true);
 	}
 
 	@Override

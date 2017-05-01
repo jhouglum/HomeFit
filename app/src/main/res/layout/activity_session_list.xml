@@ -4,5 +4,6 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context="com.homefit.android.homefit.SessionListActivity">
+  tools:context="com.homefit.android.homefit.SessionListActivity"
+	android:background="@color/colorPrimaryLight">
 </android.support.constraint.ConstraintLayout>

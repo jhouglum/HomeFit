@@ -1,6 +1,5 @@
 package com.homefit.android.homefit.database;
 
-import java.sql.Date;
 import java.util.UUID;
 import android.database.Cursor;
 import android.database.CursorWrapper;

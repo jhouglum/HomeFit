@@ -21,6 +21,7 @@ public class CustomerCursorWrapper extends CursorWrapper {
 		String state = getString(getColumnIndex(CustomerTable.Cols.STATE));
 		String zip = getString(getColumnIndex(CustomerTable.Cols.ZIP));
 		String phone = getString(getColumnIndex(CustomerTable.Cols.PHONE));
+		String email = getString(getColumnIndex(CustomerTable.Cols.EMAIL));
 
 		Customer customer = new Customer(UUID.fromString(uuidString));
 		customer.setName(name);
@@ -30,6 +31,7 @@ public class CustomerCursorWrapper extends CursorWrapper {
 		customer.setState(state);
 		customer.setZip(zip);
 		customer.setPhone(phone);
+		customer.setPhone(email);
 
 		return customer;
 	}

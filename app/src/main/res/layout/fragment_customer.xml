@@ -1,70 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	style="@style/AppTheme.Layout.Fill"
+	android:layout_height="match_parent"
+	android:background="@color/colorPrimaryLight"
+	android:orientation="vertical"
+	android:weightSum="2">
 
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/customer_name"
-    style="?android:listSeparatorTextViewStyle"/>
+	<FrameLayout
+		android:id="@+id/customer_image_frame"
+		style="@style/AppTheme.Layout.Fill">
 
-  <EditText
-    android:id="@+id/customer_name"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_name_hint"
-    android:inputType="textPersonName"/>
+		<ImageView
+			android:id="@+id/imageView"
+			style="@style/AppTheme.Layout.Fill"
+			android:background="@color/colorPrimaryLight"
+			android:contentDescription="@string/customer_image_content_desc"
+			android:padding="16dp"
+			app:srcCompat="@drawable/tacos"/>
+	</FrameLayout>
 
-  <EditText
-    android:id="@+id/customer_address_one"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_address_one_hint"/>
+	<FrameLayout
+		android:id="@+id/customer_info_frame"
+		style="@style/AppTheme.Layout.Fill"
+		android:padding="16dp">
 
-  <EditText
-    android:id="@+id/customer_address_two"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_address_two_hint"/>
+		<LinearLayout
+			android:id="@+id/customer_info_layout"
+			style="@style/AppTheme.Layout.Fill"
+			android:orientation="vertical"
+			>
 
-  <EditText
-    android:id="@+id/customer_city"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_city_hint"/>
+			<EditText
+				android:id="@+id/customer_name"
+				style="@style/AppTheme.TextFields"
+				android:layout_width="match_parent"
+				android:layout_weight="1"
+				android:hint="@string/customer_name_hint"
+				android:inputType="textPersonName"/>
 
-  <EditText
-    android:id="@+id/customer_state"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_state_hint"/>
+			<EditText
+				android:id="@+id/customer_address_one"
+				style="@style/AppTheme.TextFields"
+				android:layout_width="match_parent"
+				android:layout_weight="1"
+				android:hint="@string/customer_address_one_hint"/>
 
-  <EditText
-    android:id="@+id/customer_zip"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_zip_hint"/>
+			<EditText
+				android:id="@+id/customer_address_two"
+				style="@style/AppTheme.TextFields"
+				android:layout_width="match_parent"
+				android:layout_weight="1"
+				android:hint="@string/customer_address_two_hint"/>
 
-  <EditText
-    android:id="@+id/customer_phone"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:hint="@string/customer_phone_hint"/>
+			<LinearLayout
+				android:id="@+id/customer_city_state_zip_layout"
+				style="@style/AppTheme.Layout.Horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+
+				<EditText
+					android:id="@+id/customer_city"
+					style="@style/AppTheme.TextFields"
+					android:layout_height="match_parent"
+					android:hint="@string/customer_city_hint"
+					android:layout_width="217dp"/>
+
+				<EditText
+					android:id="@+id/customer_state"
+					style="@style/AppTheme.TextFields"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:hint="@string/customer_state_hint"
+					/>
+
+				<EditText
+					android:id="@+id/customer_zip"
+					style="@style/AppTheme.TextFields"
+					android:layout_width="68dp"
+					android:layout_height="match_parent"
+					android:hint="@string/customer_zip_hint"
+					android:maxEms="2"/>
+
+			</LinearLayout>
+
+			<EditText
+				android:id="@+id/customer_phone"
+				style="@style/AppTheme.TextFields"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:hint="@string/customer_phone_hint"/>
+
+			<EditText
+				android:id="@+id/customer_email"
+				style="@style/AppTheme.TextFields"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:hint="@string/customer_email_hint"/>
+
+			<Button
+				android:id="@+id/customer_save_button"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="2dp"
+				android:background="@color/colorPrimaryDark"
+				android:onClick="onClick"
+				android:text="@string/customer_add_bttn_text"
+				android:textColor="@color/colorTextOnPrimary"/>
+
+		</LinearLayout>
+
+	</FrameLayout>
 
 </LinearLayout>
