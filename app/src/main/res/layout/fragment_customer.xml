@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	style="@style/AppTheme.Layout.Fill"
-	android:layout_height="match_parent"
-	android:background="@color/colorPrimaryLight"
-	android:orientation="vertical"
-	android:weightSum="2">
+							xmlns:app="http://schemas.android.com/apk/res-auto"
+							xmlns:tools="http://schemas.android.com/tools"
+							style="@style/AppTheme.Layout.Fill"
+							android:background="@color/colorPrimaryLight"
+							android:orientation="vertical"
+							android:weightSum="2"
+	tools:context=".CustomerActivity">
 
 	<FrameLayout
 		android:id="@+id/customer_image_frame"
@@ -64,9 +64,9 @@
 				<EditText
 					android:id="@+id/customer_city"
 					style="@style/AppTheme.TextFields"
+					android:layout_width="217dp"
 					android:layout_height="match_parent"
-					android:hint="@string/customer_city_hint"
-					android:layout_width="217dp"/>
+					android:hint="@string/customer_city_hint"/>
 
 				<EditText
 					android:id="@+id/customer_state"
@@ -92,7 +92,8 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
-				android:hint="@string/customer_phone_hint"/>
+				android:hint="@string/customer_phone_hint"
+				android:inputType="textEmailAddress"/>
 
 			<EditText
 				android:id="@+id/customer_email"
@@ -100,7 +101,8 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
-				android:hint="@string/customer_email_hint"/>
+				android:hint="@string/customer_email_hint"
+				android:inputType="textEmailAddress"/>
 
 			<Button
 				android:id="@+id/customer_save_button"
@@ -108,8 +110,16 @@
 				android:layout_height="wrap_content"
 				android:layout_margin="2dp"
 				android:background="@color/colorPrimaryDark"
-				android:onClick="onClick"
 				android:text="@string/customer_add_bttn_text"
+				android:textColor="@color/colorTextOnPrimary"/>
+
+			<Button
+				android:id="@+id/customer_delete_button"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="2dp"
+				android:background="@color/colorPrimaryDark"
+				android:text="@string/customer_del_bttn_text"
 				android:textColor="@color/colorTextOnPrimary"/>
 
 		</LinearLayout>

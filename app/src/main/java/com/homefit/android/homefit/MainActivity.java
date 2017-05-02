@@ -2,6 +2,8 @@ package com.homefit.android.homefit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -136,32 +138,22 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	@Override
-	protected void onStart() {
-		Log.d("MainSctivity", "called onStart");
-		super.onStart();
-	}
-
-	@Override
 	protected void onPause() {
-		Log.d("MainSctivity", "called onPause");
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		Log.d("MainSctivity", "called onResume");
 		super.onResume();
 	}
 
 	@Override
 	protected void onStop() {
-		Log.d("MainSctivity", "called onStop");
 		super.onStop();
 	}
 
 	@Override
 	protected void onDestroy() {
-		Log.d("MainSctivity", "called onDestroy");
 		super.onDestroy();
 	}
 

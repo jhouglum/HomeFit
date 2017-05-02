@@ -1,6 +1,7 @@
 package com.homefit.android.homefit;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ public class CustomerFragment extends Fragment {
 	private EditText mPhoneET;
 	private EditText mEmailET;
 	private Button mSaveButton;
+	private Button mDeleteButton;
 
 	public static CustomerFragment newInstance(UUID customerId) {
 		Bundle args = new Bundle();
@@ -60,135 +62,27 @@ public class CustomerFragment extends Fragment {
 
 		mNameET = (EditText) v.findViewById(R.id.customer_name);
 		mNameET.setText(mCustomer.getName());
-//		mNameET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setName(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mAddrOneET = (EditText) v.findViewById(R.id.customer_address_one);
 		mAddrOneET.setText(mCustomer.getAddrOne());
-//		mAddrOneET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setAddrOne(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mAddrTwoET = (EditText) v.findViewById(R.id.customer_address_two);
 		mAddrTwoET.setText(mCustomer.getAddrTwo());
-//		mAddrTwoET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setAddrTwo(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mCityET = (EditText) v.findViewById(R.id.customer_city);
 		mCityET.setText(mCustomer.getCity());
-//		mCityET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setCity(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mStateET = (EditText) v.findViewById(R.id.customer_state);
 		mStateET.setText(mCustomer.getState());
-//		mStateET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setState(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mZipET = (EditText) v.findViewById(R.id.customer_zip);
 		mZipET.setText(mCustomer.getZip());
-//		mZipET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setZip(s.toString());
-//			}
-//
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mPhoneET = (EditText) v.findViewById(R.id.customer_phone);
 		mPhoneET.setText(mCustomer.getPhone());
-//		mPhoneET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setPhone(s.toString());
-//			}
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mEmailET = (EditText) v.findViewById(R.id.customer_email);
 		mEmailET.setText(mCustomer.getEmail());
-//		mEmailET.addTextChangedListener(new TextWatcher() {
-//			@Override
-//			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//			}
-//			@Override
-//			public void onTextChanged(CharSequence s, int start, int before, int count) {
-//				mCustomer.setEmail(s.toString());
-//			}
-//			@Override
-//			public void afterTextChanged(Editable s) {
-//			}
-//		});
 
 		mSaveButton = (Button) v.findViewById(R.id.customer_save_button);
 		mSaveButton.setOnClickListener(new View.OnClickListener() {
@@ -203,10 +97,21 @@ public class CustomerFragment extends Fragment {
 				mCustomer.setPhone(mPhoneET.getText().toString());
 				mCustomer.setEmail(mEmailET.getText().toString());
 
-				CustomerList.getCustomer(getActivity())
-							.updateCustomer(mCustomer);
+				Toast.makeText(getActivity(), R.string.customer_add_bttn_toast,
+							Toast.LENGTH_SHORT).show();
+				CustomerList.getCustomer(getActivity()).updateCustomer(mCustomer);
+				getActivity().finish();
+			}
+		});
 
-				Toast.makeText(getActivity(), R.string.customer_add_bttn_toast, Toast.LENGTH_SHORT);
+		mDeleteButton = (Button) v.findViewById(R.id.customer_delete_button);
+		mDeleteButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				CustomerList.getCustomer(getActivity()).deleteCustomer(mCustomer);
+				Toast.makeText(getActivity(), R.string.customer_del_bttn_toast,
+							Toast.LENGTH_SHORT).show();
+				getActivity().finish();
 			}
 		});
 

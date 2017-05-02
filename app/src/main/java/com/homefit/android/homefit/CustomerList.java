@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.homefit.android.homefit.database.CustomerCursorWrapper;
 import com.homefit.android.homefit.database.HomeFitBaseOpenHelper;
+import com.homefit.android.homefit.database.HomeFitDbSchema;
 import com.homefit.android.homefit.database.HomeFitDbSchema.CustomerTable;
 
 import java.util.ArrayList;
@@ -59,6 +60,14 @@ public class CustomerList {
 		mDatabase.update(CustomerTable.TABLE_NAME, values,
 			CustomerTable.Cols.UUID + " = ?",
 			new String[] { uuidString });
+	}
+
+	public void deleteCustomer(Customer customer) {
+		String uuidString = customer.getId().toString();
+		String where = CustomerTable.Cols.UUID.toString();
+
+		mDatabase.delete(CustomerTable.TABLE_NAME,
+					CustomerTable.Cols.UUID + "= ?", new String[] { uuidString });
 	}
 
 	private CursorWrapper queryCustomers(String whereClause, String[] whereArgs) {

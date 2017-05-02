@@ -55,6 +55,7 @@ public class CustomerListFragment extends Fragment {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
+		updateUI();
 	}
 
 	@Override
@@ -75,22 +76,11 @@ public class CustomerListFragment extends Fragment {
 				Customer customer = new Customer();
 				CustomerList.getCustomer(getActivity()).addCustomer(customer);
 				Intent intentNew = CustomerActivity.newIntent(getActivity(), customer.getId());
-				startActivityForResult(intentNew, REQUEST_CODE);
+				intentNew.putExtra(EXTRA_IS_NEW_CUST, true);
+				startActivity(intentNew);
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
-		}
-	}
-
-	@Override
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// REQUEST_CODE is defined above
-		if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
-			// Extract name value from result extras
-			String name = data.getExtras().getString("name");
-			int code = data.getExtras().getInt("code", 0);
-			// Toast the name to display temporarily on screen
-			Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
 		}
 	}
 
@@ -157,5 +147,11 @@ public class CustomerListFragment extends Fragment {
 		public int getItemCount() {
 			return mCustomers.size();
 		}
+	}
+
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		super.onHiddenChanged(hidden);
+		updateUI();
 	}
 }

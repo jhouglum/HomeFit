@@ -12,6 +12,8 @@
   <string name="customer_email_hint">Email</string>
 	<string name="customer_add_bttn_text">Save</string>
 	<string name="customer_add_bttn_toast">Changes Saved</string>
+	<string name="customer_del_bttn_text">Delete</string>
+	<string name="customer_del_bttn_toast">Customer Deleted</string>
 	<string name="customer_image_content_desc">Customer Image</string>
 
   <!-- Session -->
