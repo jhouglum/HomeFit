@@ -5,12 +5,12 @@
 							style="@style/AppTheme.Layout.Fill"
 							android:background="@color/colorPrimaryLight"
 							android:orientation="vertical"
-							android:weightSum="2"
 	tools:context=".CustomerActivity">
 
 	<FrameLayout
 		android:id="@+id/customer_image_frame"
-		style="@style/AppTheme.Layout.Fill">
+		style="@style/AppTheme.Layout.Fill"
+		android:layout_weight="2.1">
 
 		<ImageView
 			android:id="@+id/imageView"
@@ -18,32 +18,41 @@
 			android:background="@color/colorPrimaryLight"
 			android:contentDescription="@string/customer_image_content_desc"
 			android:padding="16dp"
+			android:scaleType="centerInside"
 			app:srcCompat="@drawable/tacos"/>
+
 	</FrameLayout>
 
 	<FrameLayout
 		android:id="@+id/customer_info_frame"
 		style="@style/AppTheme.Layout.Fill"
-		android:padding="16dp">
+		android:background="@color/colorPrimaryDark"
+		android:padding="8dp">
 
 		<LinearLayout
 			android:id="@+id/customer_info_layout"
 			style="@style/AppTheme.Layout.Fill"
 			android:orientation="vertical"
-			>
+			android:layout_rowWeight="3">
 
 			<EditText
 				android:id="@+id/customer_name"
 				style="@style/AppTheme.TextFields"
 				android:layout_width="match_parent"
+				android:layout_margin="2dp"
 				android:layout_weight="1"
 				android:hint="@string/customer_name_hint"
-				android:inputType="textPersonName"/>
+				android:inputType="textPersonName"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"/>
 
 			<EditText
 				android:id="@+id/customer_address_one"
 				style="@style/AppTheme.TextFields"
 				android:layout_width="match_parent"
+				android:layout_margin="2dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:layout_weight="1"
 				android:hint="@string/customer_address_one_hint"/>
 
@@ -51,7 +60,9 @@
 				android:id="@+id/customer_address_two"
 				style="@style/AppTheme.TextFields"
 				android:layout_width="match_parent"
-				android:layout_weight="1"
+				android:layout_margin="2dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:hint="@string/customer_address_two_hint"/>
 
 			<LinearLayout
@@ -66,15 +77,20 @@
 					style="@style/AppTheme.TextFields"
 					android:layout_width="217dp"
 					android:layout_height="match_parent"
-					android:hint="@string/customer_city_hint"/>
+					android:hint="@string/customer_city_hint"
+					android:layout_margin="2dp"
+					android:paddingBottom="4dp"
+					android:paddingTop="4dp"/>
 
 				<EditText
 					android:id="@+id/customer_state"
 					style="@style/AppTheme.TextFields"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
-					android:hint="@string/customer_state_hint"
-					/>
+					android:layout_margin="2dp"
+					android:paddingBottom="4dp"
+					android:paddingTop="4dp"
+					android:hint="@string/customer_state_hint"/>
 
 				<EditText
 					android:id="@+id/customer_zip"
@@ -82,7 +98,10 @@
 					android:layout_width="68dp"
 					android:layout_height="match_parent"
 					android:hint="@string/customer_zip_hint"
-					android:maxEms="2"/>
+					android:maxEms="2"
+					android:paddingBottom="4dp"
+					android:paddingTop="4dp"
+					android:layout_margin="2dp"/>
 
 			</LinearLayout>
 
@@ -92,6 +111,9 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
+				android:layout_margin="2dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:hint="@string/customer_phone_hint"
 				android:inputType="textEmailAddress"/>
 
@@ -100,7 +122,10 @@
 				style="@style/AppTheme.TextFields"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
+				android:layout_margin="2dp"
 				android:layout_weight="1"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:hint="@string/customer_email_hint"
 				android:inputType="textEmailAddress"/>
 
@@ -109,18 +134,36 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="2dp"
-				android:background="@color/colorPrimaryDark"
+				android:background="@color/colorPrimary"
+				android:maxHeight="8dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:text="@string/customer_add_bttn_text"
-				android:textColor="@color/colorTextOnPrimary"/>
+				android:textColor="@android:color/white"/>
 
 			<Button
 				android:id="@+id/customer_delete_button"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_margin="2dp"
-				android:background="@color/colorPrimaryDark"
+				android:background="@color/colorPrimary"
+				android:maxHeight="8dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
 				android:text="@string/customer_del_bttn_text"
-				android:textColor="@color/colorTextOnPrimary"/>
+				android:textColor="@android:color/white"/>
+
+			<Button
+				android:id="@+id/customer_pic_button"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="2dp"
+				android:background="@color/colorPrimary"
+				android:maxHeight="8dp"
+				android:paddingBottom="4dp"
+				android:paddingTop="4dp"
+				android:text="@string/customer_image_bttn_label"
+				android:textColor="@android:color/white"/>
 
 		</LinearLayout>
 

@@ -29,6 +29,7 @@ public class HomeFitBaseOpenHelper extends SQLiteOpenHelper {
 			CustomerTable.Cols.ZIP + ", " +
 			CustomerTable.Cols.PHONE + ", " +
 			CustomerTable.Cols.EMAIL + ")"
+//			CustomerTable.Cols.IMAGE + ")"
 		);
 		db.execSQL("create table " + SessionTable.TABLE_NAME + "(" +
 			" _id integer primary key autoincrement, " +
@@ -39,6 +40,7 @@ public class HomeFitBaseOpenHelper extends SQLiteOpenHelper {
 			SessionTable.Cols.COST + ", " +
 			SessionTable.Cols.IS_PAID + ", " +
 			SessionTable.Cols.IS_COMPLETE + ")"
+//			SessionTable.Cols. + ")"
 		);
 	}
 

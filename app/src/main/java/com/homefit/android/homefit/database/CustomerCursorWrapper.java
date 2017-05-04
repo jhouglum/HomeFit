@@ -22,6 +22,7 @@ public class CustomerCursorWrapper extends CursorWrapper {
 		String zip = getString(getColumnIndex(CustomerTable.Cols.ZIP));
 		String phone = getString(getColumnIndex(CustomerTable.Cols.PHONE));
 		String email = getString(getColumnIndex(CustomerTable.Cols.EMAIL));
+//		String imageUriString = getString(getColumnIndex(CustomerTable.Cols.IMAGE));
 
 		Customer customer = new Customer(UUID.fromString(uuidString));
 		customer.setName(name);
@@ -32,6 +33,7 @@ public class CustomerCursorWrapper extends CursorWrapper {
 		customer.setZip(zip);
 		customer.setPhone(phone);
 		customer.setPhone(email);
+//		customer.setCustImageUri(imageUriString);
 
 		return customer;
 	}

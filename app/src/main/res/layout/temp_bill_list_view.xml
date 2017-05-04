@@ -4,5 +4,8 @@
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:id="@+id/temp_billing_list_view"
-	style="@style/AppTheme.TextFields">
+	android:textStyle="normal"
+	android:text="@string/session_cust_name"
+	android:padding="4dp"
+	android:background="@color/colorTextBackground">
 </ListView>

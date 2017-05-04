@@ -5,6 +5,7 @@ import java.util.UUID;
 public class Customer {
 
 	private UUID mId;
+	private String mCustImageUri;
 	private String mName;
 	private String mAddrOne;
 	private String mAddrTwo;
@@ -88,5 +89,13 @@ public class Customer {
 
 	public void setEmail(String email) {
 		mEmail = email;
+	}
+
+	public String getCustImageUri() {
+		return mCustImageUri;
+	}
+
+	public void setCustImageUri(String custImageUri) {
+		mCustImageUri = custImageUri;
 	}
 }

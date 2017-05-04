@@ -42,6 +42,7 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="fill_horizontal"
 				android:cursorVisible="true"
+				android:singleLine="true"
 				android:hint="@string/prom_hint_login"/>
 
 			<EditText
@@ -50,6 +51,7 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="fill_horizontal"
 				android:cursorVisible="true"
+				android:singleLine="true"
 				android:hint="@string/prom_hint_password"/>
 
 			<Button

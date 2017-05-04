@@ -3,8 +3,7 @@
 					android:id="@+id/custom_tab_icon"
 					style="@style/AppTheme.Buttons"
 					android:layout_height="wrap_content"
-					android:background="@color/colorPrimary"
+					android:background="@color/colorPrimaryLight"
 					android:gravity="fill_horizontal|fill_vertical"
-					android:textColor="@android:color/white"
-					android:padding="4dp">
+					android:textColor="@android:color/white">
 </TextView>

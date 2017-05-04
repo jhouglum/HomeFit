@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.RecyclerView
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:id="@+id/customer_recycler_view"
-	style="@style/AppTheme.TextFields">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/customer_recycler_view"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorPrimaryLight"
+	android:clipToPadding="false">
 </android.support.v7.widget.RecyclerView>

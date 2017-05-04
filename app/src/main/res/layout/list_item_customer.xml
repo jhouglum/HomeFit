@@ -2,15 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+								android:layout_alignParentLeft="true"
+								android:layout_alignParentTop="true"
                 xmlns:tools="http://schemas.android.com/tools">
 
   <TextView
     android:id="@+id/list_item_customer_name_text_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textStyle="bold"
-    android:padding="4dp"
-    tools:text="Customer Name"
+    android:textStyle="normal"
+    tools:text="@string/customer_name"
+		android:padding="4dp"
+		android:background="@color/colorTextBackground"
     style="@style/AppTheme.TextFields"/>
+	
+	
 
 </RelativeLayout>

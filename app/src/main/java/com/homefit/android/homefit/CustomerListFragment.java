@@ -49,6 +49,7 @@ public class CustomerListFragment extends Fragment {
 	@Override
 	public void onResume() {
 		super.onResume();
+		mCustomerAdapter.notifyDataSetChanged();
 		updateUI();
 	}
 
@@ -152,6 +153,13 @@ public class CustomerListFragment extends Fragment {
 	@Override
 	public void onHiddenChanged(boolean hidden) {
 		super.onHiddenChanged(hidden);
+		mCustomerAdapter.notifyDataSetChanged();
 		updateUI();
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		mCustomerAdapter.notifyDataSetChanged();
 	}
 }
